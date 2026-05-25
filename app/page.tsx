@@ -1,7 +1,10 @@
 import Contact from "@/components/Contact";
 import CurrentWork from "@/components/CurrentWork";
+import Globe from "@/components/Globe";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import ShootingStars from "@/components/ShootingStars";
+import Starfield from "@/components/Starfield";
 import Timeline from "@/components/Timeline";
 
 const navItems = [
@@ -15,6 +18,11 @@ const navItems = [
 export default function Home() {
   return (
     <div className="relative isolate min-h-screen overflow-hidden">
+      <Starfield />
+      <ShootingStars />
+      <div className="pointer-events-none fixed right-[-15%] top-[-10%] -z-10 hidden md:block">
+        <Globe />
+      </div>
       <header className="sticky top-0 z-50 border-b border-white/8 bg-background/78 backdrop-blur-xl">
         <nav
           aria-label="主导航"

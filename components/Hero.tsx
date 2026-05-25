@@ -7,14 +7,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="grid min-h-[82svh] scroll-mt-20 items-center gap-10 py-16 md:grid-cols-[1fr_340px] md:py-20"
+      className="relative grid min-h-[82svh] scroll-mt-20 items-center gap-10 py-16 md:grid-cols-[1fr_340px] md:py-20"
     >
       <div className="max-w-3xl">
-        <p className="mb-5 text-sm font-medium tracking-[0.32em] text-accent-cyan uppercase">
-          lindong.live
-        </p>
-        <h1 className="text-5xl font-semibold tracking-normal text-foreground sm:text-7xl">
-          林东
+        <h1 className="hero-name text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl">
+          Dong Lin
         </h1>
         <p className="mt-6 max-w-2xl text-2xl leading-snug font-semibold text-foreground sm:text-3xl">
           技术&产品人 · 用 AI Agent 重构软件工程
