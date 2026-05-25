@@ -5,7 +5,7 @@ const projects = [
     title: "AI Planet",
     href: "http://aiplanet.live",
     label: "aiplanet.live",
-    body: "面向 AI 时代的信息与产品实验场，持续沉淀对 AI 工具、应用和生态的观察。",
+    body: "基于 AIHOT 开源项目搭建，目前正在进一步改造中。面向 AI 时代的信息与产品实验场。",
     meta: "AI 产品",
   },
   {
