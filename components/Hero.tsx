@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowDown, Github, Linkedin } from "lucide-react";
 
 const tags = ["技术&产品人", "AI 创业者", "开源贡献者"];
@@ -65,12 +66,16 @@ export default function Hero() {
       <div className="relative mx-auto flex aspect-square w-full max-w-[280px] items-center justify-center md:max-w-[320px]">
         <div className="absolute inset-0 rounded-[32px] border border-white/10 bg-panel/70 shadow-2xl shadow-black/50" />
         <div className="absolute inset-5 rounded-[24px] border border-white/10 bg-[linear-gradient(135deg,rgb(102_227_255_/_0.16),rgb(167_139_250_/_0.12),rgb(52_211_153_/_0.1))]" />
-        <div
-          aria-label="林东头像占位"
-          className="relative flex h-36 w-36 items-center justify-center rounded-full border border-white/15 bg-background text-7xl font-semibold text-foreground shadow-xl shadow-black/40 sm:h-40 sm:w-40"
-        >
-          东
-        </div>
+        <Image
+          src="/avatar.jpg"
+          alt="林东头像"
+          width={160}
+          height={160}
+          priority
+          unoptimized
+          sizes="(min-width: 640px) 160px, 144px"
+          className="relative h-36 w-36 rounded-full border border-white/15 bg-background object-cover shadow-xl shadow-black/40 sm:h-40 sm:w-40"
+        />
       </div>
     </section>
   );
