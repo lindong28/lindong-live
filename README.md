@@ -37,3 +37,4 @@ npx serve@14.2.6 out -l 4173
 - 自定义域名：`lindong.live`
 
 Squarespace DNS 需要把 apex 域名 `lindong.live` 的 A 记录指向 `76.76.21.21`。DNS 生效前，可先使用 Vercel 自动分配的 `*.vercel.app` 地址验证页面。
+

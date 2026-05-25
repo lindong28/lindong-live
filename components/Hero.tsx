@@ -1,18 +1,16 @@
-import Image from "next/image";
-
 const tags = ["技术&产品人", "AI 创业者", "开源贡献者"];
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative grid min-h-[82svh] scroll-mt-20 items-center gap-10 py-16 md:grid-cols-[1fr_340px] md:py-20"
+      className="relative min-h-[82svh] scroll-mt-20 py-16 flex items-center md:py-20"
     >
       <div className="max-w-3xl">
-        <h1 className="hero-name text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl">
+        <h1 className="hero-name pb-2 text-5xl font-bold tracking-tight sm:text-7xl md:text-8xl">
           Dong Lin
         </h1>
-        <p className="mt-6 max-w-2xl text-2xl leading-snug font-semibold text-foreground sm:text-3xl">
+        <p className="mt-8 max-w-2xl text-2xl leading-snug font-semibold text-foreground sm:text-3xl">
           技术&产品人 · 用 AI Agent 重构软件工程
         </p>
         <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
@@ -29,21 +27,6 @@ export default function Hero() {
             </span>
           ))}
         </div>
-      </div>
-
-      <div className="relative mx-auto flex aspect-square w-full max-w-[280px] items-center justify-center md:max-w-[320px]">
-        <div className="absolute inset-0 rounded-[32px] border border-white/10 bg-panel/70 shadow-2xl shadow-black/50" />
-        <div className="absolute inset-5 rounded-[24px] border border-white/10 bg-[linear-gradient(135deg,rgb(102_227_255_/_0.16),rgb(167_139_250_/_0.12),rgb(52_211_153_/_0.1))]" />
-        <Image
-          src="/avatar.jpg"
-          alt="Dong Lin"
-          width={160}
-          height={160}
-          priority
-          unoptimized
-          sizes="(min-width: 640px) 160px, 144px"
-          className="relative h-36 w-36 rounded-full border border-white/15 bg-background object-cover shadow-xl shadow-black/40 sm:h-40 sm:w-40"
-        />
       </div>
     </section>
   );

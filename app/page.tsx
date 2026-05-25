@@ -12,12 +12,13 @@ export default function Home() {
     <div className="relative isolate min-h-screen">
       <Starfield />
       <ShootingStars />
-      <div className="pointer-events-none fixed right-[-15%] top-[-10%] -z-10 hidden md:block">
-        <Globe />
-      </div>
-
       <main className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <Hero />
+        <div className="relative">
+          <div className="pointer-events-none absolute right-[-65%] top-[-5%] -z-10 hidden md:block">
+            <Globe />
+          </div>
+          <Hero />
+        </div>
         <Timeline />
         <CurrentWork />
         <Projects />

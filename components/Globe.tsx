@@ -18,13 +18,13 @@ export default function Globe() {
       height: 1200,
       phi: 0,
       theta: 0.15,
-      dark: 1,
-      diffuse: 1.2,
+      dark: 0.8,
+      diffuse: 2,
       mapSamples: 16000,
-      mapBrightness: 3.5,
-      baseColor: [0.05, 0.15, 0.22],
+      mapBrightness: 8,
+      baseColor: [0.12, 0.3, 0.45],
       markerColor: [0.17, 0.98, 0.84],
-      glowColor: [0.04, 0.16, 0.26],
+      glowColor: [0.1, 0.35, 0.55],
       markers: [],
     });
 
@@ -48,7 +48,7 @@ export default function Globe() {
       width={1200}
       height={1200}
       className="pointer-events-none"
-      style={{ width: 1000, height: 1000, opacity: 0.35 }}
+      style={{ width: 1000, height: 1000, opacity: 0.2 }}
       aria-hidden="true"
     />
   );
