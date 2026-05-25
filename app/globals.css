@@ -33,7 +33,14 @@
   box-sizing: border-box;
 }
 
+html {
+  background: var(--background);
+}
+
 body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family:
@@ -46,28 +53,38 @@ body {
     "Hiragino Sans GB",
     "Microsoft YaHei",
     sans-serif;
+  isolation: isolate;
 }
 
 body::before {
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: -2;
+  height: max(100vh, 56.25vw);
+  min-height: 100vh;
   pointer-events: none;
   content: "";
-  background:
-    radial-gradient(ellipse 120% 80% at 50% 20%, rgb(8 30 60 / 0.6), transparent 60%),
-    radial-gradient(ellipse 80% 60% at 80% 10%, rgb(20 50 100 / 0.3), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 20% 30%, rgb(40 20 80 / 0.2), transparent 50%),
-    #050505;
+  background: url("/bg.jpg") center top / cover no-repeat;
 }
 
 body::after {
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: -1;
+  height: max(100vh, 56.25vw);
+  min-height: 100vh;
   pointer-events: none;
   content: "";
-  background: linear-gradient(to bottom, transparent 60%, #050505 95%);
+  background: linear-gradient(
+    180deg,
+    rgb(5 5 5 / 0.18) 0%,
+    rgb(5 5 5 / 0.42) 58%,
+    #050505 100%
+  );
 }
 
 .shooting-star {
@@ -96,7 +113,7 @@ body::after {
 }
 
 .hero-name {
-  background: linear-gradient(90deg, #38f9d7, #60a5fa, #a78bfa, #38f9d7);
+  background: linear-gradient(90deg, #fbbf24, #f97316, #ef4444, #fbbf24);
   background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,7 +128,7 @@ body::after {
 
 ::selection {
   color: #050505;
-  background: #66e3ff;
+  background: #fbbf24;
 }
 
 a {

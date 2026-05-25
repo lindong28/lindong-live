@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>赛博兔兔 Logo 候选选择页</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #182033;
+        --muted: #61708a;
+        --line: #dce4f2;
+        --panel: #ffffff;
+        --page: #f6f8fc;
+        --cyan: #19c8f5;
+        --pink: #f155ca;
+        --lime: #a6e74a;
+        --coral: #ff8d68;
+        --violet: #7c6cff;
+        --shadow: 0 18px 42px rgba(42, 56, 92, 0.11);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 8%, rgba(25, 200, 245, 0.18), transparent 28rem),
+          radial-gradient(circle at 88% 12%, rgba(241, 85, 202, 0.13), transparent 26rem),
+          linear-gradient(180deg, #ffffff 0%, var(--page) 46%, #eef3fb 100%);
+      }
+
+      header {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 42px 22px 18px;
+      }
+
+      .eyebrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 6px 11px;
+        border: 1px solid rgba(24, 32, 51, 0.1);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.76);
+        color: #33415f;
+        font-size: 13px;
+        line-height: 1.2;
+        backdrop-filter: blur(14px);
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 920px;
+        font-size: clamp(34px, 5vw, 64px);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        max-width: 880px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      .feedback {
+        max-width: 1180px;
+        margin: 18px auto 0;
+        padding: 0 22px 10px;
+      }
+
+      .feedback-box {
+        border: 1px solid rgba(24, 32, 51, 0.1);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 10px 28px rgba(44, 58, 94, 0.08);
+        padding: 16px 18px;
+      }
+
+      .feedback-title {
+        margin: 0 0 8px;
+        font-size: 15px;
+        font-weight: 760;
+      }
+
+      .feedback-copy {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 18px 22px 64px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .image-wrap {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        background:
+          linear-gradient(135deg, rgba(25, 200, 245, 0.11), transparent 38%),
+          linear-gradient(315deg, rgba(255, 141, 104, 0.12), transparent 42%),
+          #f9fbff;
+      }
+
+      .image-wrap img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .number {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        height: 38px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        background: rgba(17, 24, 39, 0.72);
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0;
+        backdrop-filter: blur(16px);
+      }
+
+      .content {
+        padding: 18px 18px 20px;
+      }
+
+      .content h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .summary {
+        margin: 9px 0 14px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 8px 10px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .meta dt {
+        color: #35415b;
+        font-weight: 760;
+      }
+
+      .meta dd {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .tag {
+        min-height: 28px;
+        padding: 6px 9px;
+        border-radius: 7px;
+        background: #f0f5ff;
+        color: #33415f;
+        font-size: 13px;
+        line-height: 1.2;
+      }
+
+      .tag.cyan {
+        background: rgba(25, 200, 245, 0.14);
+      }
+
+      .tag.pink {
+        background: rgba(241, 85, 202, 0.13);
+      }
+
+      .tag.lime {
+        background: rgba(166, 231, 74, 0.18);
+      }
+
+      .tag.coral {
+        background: rgba(255, 141, 104, 0.15);
+      }
+
+      .tag.violet {
+        background: rgba(124, 108, 255, 0.13);
+      }
+
+      @media (min-width: 1120px) {
+        .grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        header {
+          padding-top: 30px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .content h2 {
+          font-size: 20px;
+        }
+
+        .intro,
+        .feedback-copy {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="eyebrow">
+        <span class="pill">赛博兔兔</span>
+        <span class="pill">AI / 未来 / 创业</span>
+        <span class="pill">无文字 Logo 候选</span>
+      </div>
+      <h1>Logo 候选选择页</h1>
+      <p class="intro">
+        这一组沿着上一张最接近目标的圆润高端赛博兔方向继续扩展。重点比较轮廓、成熟度、护目镜、耳朵电路、头图延展性和品牌符号化程度。
+      </p>
+    </header>
+
+    <section class="feedback" aria-label="反馈格式">
+      <div class="feedback-box">
+        <p class="feedback-title">建议反馈格式</p>
+        <p class="feedback-copy">
+          直接回复编号即可，例如：选 02；喜欢 02 的成熟度，想结合 07 的霓虹像素感，脸型再接近 01，护目镜更简洁。
+        </p>
+      </div>
+    </section>
+
+    <main>
+      <section class="grid" aria-label="Logo 候选列表">
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">01</span>
+            <img src="assets/candidate-01.png" alt="01 基准强化版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>基准强化版</h2>
+            <p class="summary">最接近上一张的方向：圆润、明亮、可爱但不过幼稚，护目镜和耳朵电路都是主视觉。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>公众号头像、文章头图、网站头像区。</dd>
+              <dt>偏向</dt>
+              <dd>平衡型，科技感和亲和力都保留。</dd>
+              <dt>可调</dt>
+              <dd>成熟一点、眼神锐一点、护目镜简化。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag cyan">高相似度</span>
+              <span class="tag pink">彩色护目镜</span>
+              <span class="tag lime">亲和</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">02</span>
+            <img src="assets/candidate-02.png" alt="02 创业精英版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>创业精英版</h2>
+            <p class="summary">更强调成熟、可信和创始人气质，保留可爱轮廓，但弱化玩具感。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>创业、AI 商业、个人网站名片。</dd>
+              <dt>偏向</dt>
+              <dd>更专业、更有主理人感。</dd>
+              <dt>可调</dt>
+              <dd>增加可爱度、减少西装感、提高未来感。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag violet">成熟</span>
+              <span class="tag cyan">AI 创业</span>
+              <span class="tag coral">可信</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">03</span>
+            <img src="assets/candidate-03.png" alt="03 斜侧时装科技版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>斜侧时装科技版</h2>
+            <p class="summary">三分之四角度让形象更有姿态，整体更锋利、时尚，少一点传统头像感。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>网站头图、专栏封面、社媒大图。</dd>
+              <dt>偏向</dt>
+              <dd>更潮流、更品牌大片感。</dd>
+              <dt>可调</dt>
+              <dd>转回正面、降低锐度、增强识别性。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag pink">时尚</span>
+              <span class="tag violet">有姿态</span>
+              <span class="tag cyan">头图友好</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">04</span>
+            <img src="assets/candidate-04.png" alt="04 极简头像版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>极简头像版</h2>
+            <p class="summary">更像 App 图标或公众号头像，细节更少，缩小后更容易保持清晰。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>小尺寸头像、favicon、二维码旁标识。</dd>
+              <dt>偏向</dt>
+              <dd>简洁、圆润、易传播。</dd>
+              <dt>可调</dt>
+              <dd>增加创业精英感、增强电路细节。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag lime">易缩小</span>
+              <span class="tag cyan">清爽</span>
+              <span class="tag coral">软萌克制</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">05</span>
+            <img src="assets/candidate-05.png" alt="05 创始人徽章版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>创始人徽章版</h2>
+            <p class="summary">把科技领口和核心节点做得更明确，强化个人品牌和创业精英感。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>作者头像、名片、关于页开场视觉。</dd>
+              <dt>偏向</dt>
+              <dd>稳重、有身份感、未来商业。</dd>
+              <dt>可调</dt>
+              <dd>减少徽章感、脸更圆、颜色更活泼。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag violet">身份感</span>
+              <span class="tag coral">商业</span>
+              <span class="tag cyan">科技领口</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">06</span>
+            <img src="assets/candidate-06.png" alt="06 半扁平品牌化版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>半扁平品牌化版</h2>
+            <p class="summary">减少 3D 渲染厚度，更接近可沉淀成品牌系统的图形语言。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>后续做 SVG 化、网站组件、统一视觉系统。</dd>
+              <dt>偏向</dt>
+              <dd>品牌标识、干净、可扩展。</dd>
+              <dt>可调</dt>
+              <dd>提高质感、加回圆润 3D 体积。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag cyan">品牌化</span>
+              <span class="tag lime">可系统化</span>
+              <span class="tag violet">克制</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">07</span>
+            <img src="assets/candidate-07.png" alt="07 像素霓虹融合版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>像素霓虹融合版</h2>
+            <p class="summary">加入少量像素模块和更活跃的霓虹感，增强 AI 原生和互联网气质。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>科技文章头图、社媒封面、活动视觉。</dd>
+              <dt>偏向</dt>
+              <dd>更年轻、更有动势、更赛博。</dd>
+              <dt>可调</dt>
+              <dd>降低像素感、提高高级感、减少背景元素。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag pink">霓虹</span>
+              <span class="tag lime">像素</span>
+              <span class="tag cyan">AI 原生</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">08</span>
+            <img src="assets/candidate-08.png" alt="08 克制二次元版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>克制二次元版</h2>
+            <p class="summary">轻微二次元影响，眼神更有表达，但仍控制在专业和品牌化范围内。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>有个性但不想太企业化的个人 IP。</dd>
+              <dt>偏向</dt>
+              <dd>更有角色感、更亲近内容创作者。</dd>
+              <dt>可调</dt>
+              <dd>弱化二次元、眼睛更简洁、增加精英感。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag violet">轻二次元</span>
+              <span class="tag pink">角色感</span>
+              <span class="tag cyan">明亮</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">09</span>
+            <img src="assets/candidate-09.png" alt="09 符号化品牌 Mark 版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>符号化品牌 Mark</h2>
+            <p class="summary">把兔脸、护目镜和耳朵电路压缩成更强的图形符号，便于后续做正式 Logo。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>长期品牌资产、网站导航标、名片烫印方向。</dd>
+              <dt>偏向</dt>
+              <dd>更像 Logo，少一点吉祥物。</dd>
+              <dt>可调</dt>
+              <dd>加回表情、提高可爱度、增加 3D 光泽。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag cyan">强符号</span>
+              <span class="tag violet">正式 Logo</span>
+              <span class="tag coral">高级</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="image-wrap">
+            <span class="number">10</span>
+            <img src="assets/candidate-10.png" alt="10 头图友好版赛博兔兔 Logo 候选" />
+          </div>
+          <div class="content">
+            <h2>头图友好版</h2>
+            <p class="summary">保留大兔子主体，同时让背景更适合横向裁切到文章头图和网站首屏。</p>
+            <dl class="meta">
+              <dt>适合</dt>
+              <dd>文章头图、网站横幅、公众号封面延展。</dd>
+              <dt>偏向</dt>
+              <dd>视觉张力更强，头像和头图都能用。</dd>
+              <dt>可调</dt>
+              <dd>压缩背景、增强头像识别、提高简洁度。</dd>
+            </dl>
+            <div class="tags">
+              <span class="tag coral">横裁友好</span>
+              <span class="tag cyan">大主体</span>
+              <span class="tag pink">彩色背景</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
