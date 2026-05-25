@@ -3,18 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lindong.live"),
-  title: "Dong Lin | 用 AI Agent 重构软件工程",
+  title: "Cyber Rabbit | 用 AI Agent 重构软件工程",
   description:
-    "Dong Lin的个人网站：技术&产品人，长期关注 AI Agent、软件工程、开源基础设施与 AI 产品创业。",
+    "Cyber Rabbit的个人网站：技术&产品人，长期关注 AI Agent、软件工程、开源基础设施与 AI 产品创业。",
   alternates: {
     canonical: "https://lindong.live",
   },
   openGraph: {
-    title: "Dong Lin | 用 AI Agent 重构软件工程",
+    title: "Cyber Rabbit | 用 AI Agent 重构软件工程",
     description:
-      "技术&产品人 · 用 AI Agent 重构软件工程。了解Dong Lin的经历、当前方向、作品与联系方式。",
+      "技术&产品人 · 用 AI Agent 重构软件工程。了解Cyber Rabbit的经历、当前方向、作品与联系方式。",
     url: "https://lindong.live",
-    siteName: "Dong Lin个人网站",
+    siteName: "Cyber Rabbit个人网站",
     locale: "zh_CN",
     type: "website",
     images: [
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Dong Lin个人网站预览图",
+        alt: "Cyber Rabbit个人网站预览图",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dong Lin | 用 AI Agent 重构软件工程",
+    title: "Cyber Rabbit | 用 AI Agent 重构软件工程",
     description: "技术&产品人 · 用 AI Agent 重构软件工程",
     images: ["/og-image.svg"],
   },
@@ -46,6 +46,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className="h-full scroll-smooth">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full bg-background text-foreground antialiased">
         {children}
       </body>

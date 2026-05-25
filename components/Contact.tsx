@@ -20,7 +20,7 @@ export default function Contact() {
         联系
       </h2>
       <p className="mb-8 max-w-2xl text-sm leading-7 text-muted sm:text-base">
-        如果你也在做 AI Agent、开发者工具、工程基础设施或 AI 产品创业，欢迎联系。
+        如果你也在做 AI Agent、Agent 基础设施或 AI 产品创业，欢迎联系。
       </p>
       <div className="flex gap-4">
         {links.map((link) => {
