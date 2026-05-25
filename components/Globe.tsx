@@ -45,8 +45,10 @@ export default function Globe() {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none absolute opacity-30"
-      style={{ width: 1000, height: 1000 }}
+      width={1200}
+      height={1200}
+      className="pointer-events-none"
+      style={{ width: 1000, height: 1000, opacity: 0.35 }}
       aria-hidden="true"
     />
   );

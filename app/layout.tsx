@@ -3,18 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lindong.live"),
-  title: "林东 | 用 AI Agent 重构软件工程",
+  title: "Dong Lin | 用 AI Agent 重构软件工程",
   description:
-    "林东的个人网站：技术&产品人，长期关注 AI Agent、软件工程、开源基础设施与 AI 产品创业。",
+    "Dong Lin的个人网站：技术&产品人，长期关注 AI Agent、软件工程、开源基础设施与 AI 产品创业。",
   alternates: {
     canonical: "https://lindong.live",
   },
   openGraph: {
-    title: "林东 | 用 AI Agent 重构软件工程",
+    title: "Dong Lin | 用 AI Agent 重构软件工程",
     description:
-      "技术&产品人 · 用 AI Agent 重构软件工程。了解林东的经历、当前方向、作品与联系方式。",
+      "技术&产品人 · 用 AI Agent 重构软件工程。了解Dong Lin的经历、当前方向、作品与联系方式。",
     url: "https://lindong.live",
-    siteName: "林东个人网站",
+    siteName: "Dong Lin个人网站",
     locale: "zh_CN",
     type: "website",
     images: [
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "林东个人网站预览图",
+        alt: "Dong Lin个人网站预览图",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "林东 | 用 AI Agent 重构软件工程",
+    title: "Dong Lin | 用 AI Agent 重构软件工程",
     description: "技术&产品人 · 用 AI Agent 重构软件工程",
     images: ["/og-image.svg"],
   },

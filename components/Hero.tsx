@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowDown, Github, Linkedin } from "lucide-react";
 
 const tags = ["技术&产品人", "AI 创业者", "开源贡献者"];
 
@@ -30,34 +29,6 @@ export default function Hero() {
             </span>
           ))}
         </div>
-
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="#projects"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-foreground px-5 text-sm font-semibold text-background transition hover:bg-accent-cyan"
-          >
-            查看作品
-            <ArrowDown aria-hidden="true" size={18} strokeWidth={2.2} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/lindong28/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/12 px-5 text-sm font-semibold text-foreground transition hover:border-accent-violet hover:bg-white/8"
-          >
-            <Linkedin aria-hidden="true" size={18} strokeWidth={2.1} />
-            领英
-          </a>
-          <a
-            href="https://github.com/lindong28"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/12 px-5 text-sm font-semibold text-foreground transition hover:border-accent-emerald hover:bg-white/8"
-          >
-            <Github aria-hidden="true" size={18} strokeWidth={2.1} />
-            GitHub
-          </a>
-        </div>
       </div>
 
       <div className="relative mx-auto flex aspect-square w-full max-w-[280px] items-center justify-center md:max-w-[320px]">
@@ -65,7 +36,7 @@ export default function Hero() {
         <div className="absolute inset-5 rounded-[24px] border border-white/10 bg-[linear-gradient(135deg,rgb(102_227_255_/_0.16),rgb(167_139_250_/_0.12),rgb(52_211_153_/_0.1))]" />
         <Image
           src="/avatar.jpg"
-          alt="林东头像"
+          alt="Dong Lin"
           width={160}
           height={160}
           priority
