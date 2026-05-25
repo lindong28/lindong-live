@@ -22,14 +22,23 @@ npx vercel@latest deploy --prod --yes
 
 The Vercel project is linked locally through `.vercel/project.json`, which is ignored by git.
 
+GitHub auto-deploy is connected for `lindong28/lindong-live`. Pushing to `main` triggers a production deployment in Vercel.
+
 ## DNS
 
-Vercel has `lindong.live` added to the `lindong-live` project. The registrar DNS still needs to point the apex domain at Vercel:
+Vercel has `lindong.live` added to the `lindong-live` project. The registrar DNS points the apex domain at Vercel:
 
 ```text
 Type: A
-Name: lindong.live
+Name: @
 Value: 76.76.21.21
 ```
 
-Before DNS is updated, `lindong.live` can still serve the Squarespace placeholder. Use `dig +short lindong.live A` and `curl -sI https://lindong.live` to verify propagation.
+Use these commands to verify DNS and origin:
+
+```bash
+dig +short lindong.live A
+NO_PROXY=lindong.live curl -sI https://lindong.live
+```
+
+`NO_PROXY` is important in local shells that have `HTTP_PROXY` / `HTTPS_PROXY` set; the local proxy can serve a stale Squarespace response even after public DNS points to Vercel.
