@@ -33,9 +33,6 @@ export default function CurrentWork() {
             把 AI 落到真实工程场景
           </h2>
         </div>
-        <p className="max-w-md text-sm leading-7 text-muted">
-          重点不是再做一个演示，而是让 AI Agent 进入需求、编码、验证、交付的每个环节。
-        </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">

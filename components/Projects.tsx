@@ -2,7 +2,7 @@ const projects = [
   {
     title: "AI Planet",
     href: "http://aiplanet.live",
-    body: "基于 AIHOT 开源项目搭建，目前正在进一步改造中。面向 AI 时代的信息与产品实验场。",
+    body: "参照 http://aihot.virxact.com/ 界面复制的项目，目前正在进一步改造中，计划之后开源。让每个人都可以建立自己的一站式信息收集助手。",
   },
   {
     title: "AI Agent Config Share",
@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-20 py-16 sm:py-20">
       <h2 className="mb-10 text-3xl font-semibold tracking-normal text-foreground sm:text-4xl">
-        正在公开迭代的项目
+        作品和工具
       </h2>
 
       <div className="grid gap-4 md:grid-cols-2">

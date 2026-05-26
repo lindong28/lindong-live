@@ -7,7 +7,7 @@ export default function Hero() {
       className="relative min-h-[82svh] scroll-mt-20 py-16 flex items-start justify-end pt-[18vh] md:py-20 md:pt-[18vh]"
     >
       <div className="text-right">
-        <h1 className="hero-name whitespace-nowrap pb-2 text-5xl font-light uppercase tracking-[0.12em] sm:text-7xl md:text-8xl" style={{ fontFamily: "'Cinzel', serif" }}>
+        <h1 className="hero-name whitespace-nowrap pb-2 text-4xl font-light uppercase tracking-[0.12em] sm:text-6xl md:text-7xl" style={{ fontFamily: "'Cinzel', serif" }}>
           Cyber Rabbit
         </h1>
         <p className="mt-6 text-2xl font-light uppercase tracking-[0.2em] text-white/70 sm:text-3xl" style={{ fontFamily: "'Cinzel', serif" }}>
