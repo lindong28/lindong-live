@@ -9,13 +9,13 @@ const workItems = [
   },
   {
     title: "开源贡献",
-    body: "持续关注流处理、消息系统、机器学习基础设施与开发者工具，重视可维护的工程质量。",
+    body: "围绕 Agent 运行可观测性、人机交互界面、 可复用 skill 发布开箱可用的开源项目。",
     icon: Code2,
     accent: "text-accent-emerald",
   },
   {
     title: "AI 产品探索",
-    body: "把模型能力、上下文工程、工具调用和产品体验结合，做真正能被高频使用的 AI 工具。",
+    body: "把模型能力、上下文工程、工具调用和产品体验结合，提供直接满足终端用户需求的 toC 产品。",
     icon: Blocks,
     accent: "text-accent-violet",
   },
